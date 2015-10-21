@@ -1,0 +1,23 @@
+{
+  "name": "kazinoki",
+  "version": "0.1.0",
+  "description": "Kazinoki",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/electron .",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ne-sachirou/Kazinoki.git"
+  },
+  "author": "ne_Sachirou",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/ne-sachirou/Kazinoki/issues"
+  },
+  "homepage": "https://github.com/ne-sachirou/Kazinoki#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^0.34.0"
+  }
+}
