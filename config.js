@@ -2,7 +2,7 @@
 var fs = require('fs');
 
 module.exports = class Config {
-  construct() {
+  constructor() {
     this.booksDir = '';
   }
 

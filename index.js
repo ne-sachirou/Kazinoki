@@ -1,16 +1,14 @@
 'use strict';
 var app           = require('app');
 var BrowserWindow = require('browser-window');
-var Config        = require('./config');
+var Kazinoki      = require('./kazinoki');
 
-var mainWindow = null;
+var window = null;
 
-function onReady(app, config) {
-  mainWindow = new BrowserWindow({width: 800, height: 600});
-  mainWindow.loadUrl('file://' + __dirname + '/browser.html');
-  mainWindow.on('closed', () => {
-    mainWindow = null;
-  });
+function onReady(app, kazinoki) {
+  window = new BrowserWindow({width: 800, height: 600});
+  window.loadUrl(`file://${__dirname}/browser.html`);
+  window.on('closed', () => window = null);
 }
 
 require('crash-reporter').start();
@@ -23,7 +21,7 @@ app.on('window-all-closed', () => {
 
 Promise.all([
   new Promise((resolve) => app.on('ready', () => resolve(app))),
-  new Config().load(),
+  new Kazinoki().init(),
 ]).
   then((values) => onReady.apply(null, values)).
   catch((err) => {
