@@ -25,6 +25,6 @@ Promise.all([
 ]).
   then((values) => onReady.apply(null, values)).
   catch((err) => {
-    console.error(err);
+    console.error(err.stack);
     app.quit();
   });
