@@ -1,3 +1,4 @@
+var remote = require('remote');
 var kazinoki = remote.require('./kazinoki').instance;
 
 var App = React.createClass({

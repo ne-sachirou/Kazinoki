@@ -1,7 +1,7 @@
 'use strict';
 var fs = require('fs');
 
-module.exports = class Config {
+class Config {
   constructor() {
     this.booksDir = '';
   }
@@ -19,3 +19,5 @@ module.exports = class Config {
     });
   }
 }
+
+module.exports = Config;
